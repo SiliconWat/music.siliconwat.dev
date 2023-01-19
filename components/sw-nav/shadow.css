@@ -1,0 +1,58 @@
+:host {
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border: 1px solid grey;
+	background-color: blueviolet;
+	display: flex;
+	justify-content: space-evenly;
+	flex-flow: row nowrap;
+	font-size: 1rem;
+}
+
+nav {
+	visibility: hidden;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: darkturquoise;
+	width: auto;
+	padding: 10px 25px 15px 10px;
+	z-index: 1;
+	border-radius: 5px;
+}
+
+nav::before {
+	content: "▲";
+	color: darkturquoise;
+	position: absolute;
+	top: -17px;
+	left: 15px;
+}
+
+::slotted(h3) {
+	cursor: pointer;
+}
+
+nav ::slotted(span) {
+	margin: 5px;
+	cursor: pointer;
+}
+
+nav ::slotted(span:hover) {
+	color: blueviolet;
+}
+
+ul li:hover ::slotted(h3) {
+	color: darkturquoise;
+}
+
+ul li:hover nav {
+	visibility: visible;
+}

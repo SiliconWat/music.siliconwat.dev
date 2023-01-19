@@ -1,0 +1,100 @@
+:host {
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(15rem, 1fr));
+	grid-auto-flow: rows;
+	grid-auto-rows: 5rem;
+	grid-column-gap: 0;
+	grid-row-gap: 4rem;
+}
+
+ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 4.1rem;
+	flex: 1 1 20rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 50%) 1px, transparent 1px);
+	background-size: 100% 1rem;
+	background-repeat: repeat;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+ol:not(:first-child) {
+	display: grid;
+	grid-template: 1fr / repeat(4, 1fr);
+	padding: 0;
+	margin: 0;
+}
+
+ol.treble:first-child::before {
+	content: "𝄞";
+	position: relative;
+	font-size: 9rem;
+	top: -4.9rem;
+}
+
+ol.bass:first-child::before {
+	content: "𝄢";
+	position: relative;
+	font-size: 9rem;
+	top: -4.9rem;
+}
+
+ol:first-child::after {
+	content: "c";
+	position: relative;
+	font-size: 3.6rem;
+	top: -6.8rem;
+}
+
+ol:first-child {
+	margin-left: 6rem;
+	border-right: 0;
+}
+
+ol:nth-of-type(2) {
+	border-left: 0;
+}
+
+/*ol:last-child::before {
+	content: "𝄂";
+	position: relative;
+	top: -2.5rem;
+	right: 1.4rem;
+	left: auto;
+	font-size: 6rem;
+}*/
+
+ol:last-child {
+	border-right: 10px double black;
+	box-shadow: 5px 0 0 black;
+	margin-right: -1rem;
+}
+
+ol:not(:first-child) li {
+	margin-top: -2rem;
+	margin-bottom: -1rem;
+}
+
+ol:not(:first-child) li:hover {
+	background-color: hsla(60deg, 100%, 50%, 50%);
+}
+
+ol:not(:first-child) li:before {
+	content: "▲";
+	color: blue;
+	position: relative;
+	top: 7.5rem;
+	left: 1.4rem;
+	visibility: hidden;
+}
+
+ol:not(:first-child) li.pointer:before {
+	visibility: visible;
+}

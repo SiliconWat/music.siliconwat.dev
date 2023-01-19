@@ -1,1 +1,43 @@
-Currently in stealth development...
+<html>
+    <head>
+        <title>Music PWA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="loading.gif">
+        <link rel="stylesheet" href="index.css">
+		<script src="//unpkg.com/@ungap/custom-elements/es.js"></script>
+        <script src="index.js" type="module"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZVN471GV4"></script>
+    </head>
+    <body is="sw-body">
+		<header>
+			<sw-nav>
+				<h3 slot="menu1">Measure</h3>
+				<span slot="menu1-sub1">Add</span>
+				<span slot="menu1-sub2">Remove</span>
+				<h3 slot="menu2">Note</h3>
+				<span slot="menu2-sub1">Whole</span>
+				<span slot="menu2-sub2">Half</span>
+				<span slot="menu2-sub3">Quarter</span>
+				<h3 slot="menu3">Accidental</h3>
+				<span slot="menu3-sub1">Sharp</span>
+				<span slot="menu3-sub2">Flat</span>
+				<span slot="menu3-sub3">Natural</span>
+				<h3 slot="menu4">Rest</h3>
+				<span slot="menu4-sub1">Whole</span>
+				<span slot="menu4-sub2">Half</span>
+				<span slot="menu4-sub3">Quarter</span>
+			</sw-nav>
+			<sw-menubar>
+				<sw-player></sw-player>
+				<sw-instrument></sw-instrument>
+				<sw-history></sw-history>
+			</sw-menubar>
+		</header>
+		<main>
+			<sw-editor clef="treble" tempo="60" volume="3"></sw-editor>
+		</main>
+		<footer>
+			<sw-piano instrument="piano" clef="treble" synth="triangle" volume="10" audible></sw-piano>
+		</footer>
+	</body>
+</html>

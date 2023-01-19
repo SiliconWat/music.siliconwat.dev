@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+html {
+	font-family: Playfair Display, sans-serif;
+	font-size: 12pt;
+}
+
+body {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	flex: 1;
+}
+
+main {
+	flex: 8;
+	border: 1px solid grey;
+	padding: 4rem;
+	overflow: scroll;
+}
+
+footer {
+	flex: 3;
+	border: 1px solid grey;
+	background-color: black;
+	overflow-x: scroll;
+}
